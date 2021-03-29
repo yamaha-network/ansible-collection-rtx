@@ -1,0 +1,14 @@
+RTX1210 BootROM Ver. 1.03
+RTX1210 FlashROM Table Ver. 1.00
+RTX1210 Rev.14.01.28 (Tue May 15 18:34:08 2018)
+  main:  RTX1210 ver=00 serial=S4H024020 MAC-Address=00:a0:de:c9:d6:e1 MAC-Address=00:a0:de:c9:d6:e2 MAC-Address=00:a0:de:c9:d6:e3
+CPU:    7%(5sec)   0%(1min)   0%(5min)    Memory: 16% used
+Packet-buffer:   0%(small)   0%(middle)   7%(large)   0%(huge) used
+Firmware: exec0  Config. file: config0
+Default firmware: exec0  Default config. file: config2
+Serial Baudrate: 9600
+Boot time: 2020/01/06 16:59:16 +09:00
+Current time: 2020/03/17 16:21:59 +09:00
+Elapsed time from boot: 70days 23:22:43
+Security Class: 1, FORGET: ON, TELNET: OFF
+Inside Temperature(C.): 57

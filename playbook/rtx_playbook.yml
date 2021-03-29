@@ -1,0 +1,46 @@
+---
+- hosts: yamaha
+  collections: 
+    - yamaha_network.rtx
+  connection: network_cli
+  gather_facts: false
+
+  tasks:
+    - name: show environment
+      yamaha_network.rtx.rtx_command:
+        commands: show environment
+      register: result
+
+    - name: show result
+      debug:
+        msg: "{{ result.stdout_lines[0] }}"
+
+    - name: get backup
+      yamaha_network.rtx.rtx_config:
+        backup: yes
+        backup_options:
+          dir_path: backup
+          filename: backup.txt
+
+    - name: set lan2
+      yamaha_network.rtx.rtx_config:
+        lines:
+          - ip lan2 address dhcp
+
+    - name: set lan3
+      yamaha_network.rtx.rtx_config:
+        lines:
+          - pp always-on on
+          - pppoe use lan3
+        parents:
+          - pp select 1
+        match: strict
+        save_when: changed
+
+  vars:
+    ansible_network_os: yamaha_network.rtx.rtx
+    ansible_user: ansible
+    ansible_password: ansible
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_become_password: yamaha
