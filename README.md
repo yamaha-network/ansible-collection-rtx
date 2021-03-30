@@ -81,4 +81,4 @@ master
 Copyright (C) Yamaha Corporation. All Rights Reserved.
 ## License
 ### GPL V3
-See the LICENSE file.
+See the [LICENSE](ansible_collections/yamaha_network/rtx/LICENSE) file.
