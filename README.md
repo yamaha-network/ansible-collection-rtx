@@ -66,7 +66,7 @@ master
 |-| running | ansible-playbook --diffとすることでdiffを作成する際にrunningコンフィグと比較する |
 | intended_config |-| diff_againstオプションにintendedを設定した場合に比較を行うコンフィグを設定する |
 | diff_ignores_lines |-| 差分を無視する(diff表示に出力されない) |
-| match | lines | コマンド1行毎にその設定が存在するか比較して設定を行う(デフォルト値) |
+| match | line | コマンド1行毎にその設定が存在するか比較して設定を行う(デフォルト値) |
 |-| strict | 設定されている位置(行数)が異なる場合はコマンド設定を行う |
 |-| exact | 設定が完全に一致している場合以外はコマンド設定を行う |
 |-| none | 比較をせずに設定を行う |
@@ -75,7 +75,7 @@ master
 | save_when | always | 常に保存する |
 |-| never | 常に保存しない |
 |-| changed | タスク実行により変更がある時に保存する |
-| source |-| 設定対象のコンフィグを記載したパスを設定する |
+| src |-| 設定対象のコンフィグを記載したパスを設定する |
 
 ## Copyright
 Copyright (C) Yamaha Corporation. All Rights Reserved.
