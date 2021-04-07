@@ -7,11 +7,15 @@
 - rtx_config.py-ヤマハ機器(RTX/NVR/FWX/vRX)の設定系コマンドを実行するためのモジュール
 
 ### Documents
+
 インストール手順やモジュールの詳細は以下をご覧ください。
+- [RTpro](http://www.rtpro.yamaha.co.jp/RT/docs/ansible/index.html) : ヤマハネットワーク製品技術情報ページ
+- [Ansible Galaxy](https://galaxy.ansible.com/yamaha_network/rtx) : Ansible Galaxyヤマハコレクションページ
 
-[RTpro](http://www.rtpro.yamaha.co.jp/RT/docs/ansible/index.html) : ヤマハネットワーク製品技術情報ページ
-
-[Ansible Galaxy](https://galaxy.ansible.com/yamaha_network/rtx) : Ansible Galaxyヤマハコレクションページ
+**注意** :
+<br>ansibleのインストール方法によっては、rtxコレクションで利用するansible.netcommonがインストールされない可能性があります。
+<br>その場合は以下のコマンドを実行してください。
+>ansible-galaxy collection install ansible.netcommon
 
 ## Requirements
 - Ansible 2.10
