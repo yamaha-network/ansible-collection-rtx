@@ -9,7 +9,7 @@ namespace: yamaha_network
 name: rtx
 
 # The version of the collection. Must be compatible with semantic versioning
-version: 1.0.0
+version: 1.0.1
 
 # The path to the Markdown (.md) readme file. This path is relative to the root of the collection
 readme: README.md
@@ -40,13 +40,14 @@ tags: [yamaha,networking,management]
 # collection label 'namespace.name'. The value is a version range
 # L(specifiers,https://python-semanticversion.readthedocs.io/en/latest/#requirement-specification). Multiple version
 # range specifiers can be set and are separated by ','
-#dependencies: {}
+dependencies:
+  ansible.netcommon: ">=2.0.0"
 
 # The URL of the originating SCM repository
 repository: https://github.com/yamaha-network/ansible-collection-rtx
 
 # The URL to any online docs
-#documentation: 
+documentation: http://www.rtpro.yamaha.co.jp/RT/docs/ansible/index.html
 
 # The URL to the homepage of the collection/project
 #homepage: 
