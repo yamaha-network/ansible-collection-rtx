@@ -49,9 +49,11 @@ class TerminalModule(TerminalBase):
             return
 
         cmd = {u'command': u'administrator'}
+        cmd[u'prompt'] = to_text(r"[\r\n]?Password: $", errors='surrogate_or_strict')
         if passwd:
-            cmd[u'prompt'] = to_text(r"[\r\n]?Password: $", errors='surrogate_or_strict')
             cmd[u'answer'] = passwd
+        else:
+            cmd[u'answer'] = ''
         try:
             self._exec_cli_command(to_bytes(json.dumps(cmd), errors='surrogate_or_strict'))
         except AnsibleConnectionFailure:
